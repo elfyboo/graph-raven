@@ -1,4 +1,4 @@
 (executable
  (public_name graph_raven)
  (name main)
- (libraries graph_raven hugin nx))
+ (libraries graph_raven hugin nx ocamlgraph))

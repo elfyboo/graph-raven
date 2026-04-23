@@ -1,2 +1,2 @@
 let () =
-  Graph_raven.Plot_example.run ()
+  Graph_raven.Tests.test_1 ()

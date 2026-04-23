@@ -12,14 +12,14 @@ let remove_vertex g u =
   Int_map.remove u g
   |> Int_map.map (Int_set.remove u)
 
-let add_edge g u v =
+let add_edge_to_list g u v =
   let add g a b =
     let neighbors = Option.value (Int_map.find_opt a g) ~default:Int_set.empty in
     Int_map.add a (Int_set.add b neighbors) g
   in
   add (add g u v) v u
 
-let remove_edge g u v =
+let remove_edge_from_list g u v =
   let remove g a b =
     match Int_map.find_opt a g with
     | None -> g
